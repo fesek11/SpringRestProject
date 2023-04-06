@@ -7,8 +7,11 @@
 <body>
 Hello world
 
-<form th:action="@{@/logout}" method="post">
+<form th:action="@{/logout}" method="post">
     <input type="submit" value="Logout">
 </form>
+<br/>
+<a th:href="@{/auth/registration}"> Registration</a>
+
 </body>
 </html>

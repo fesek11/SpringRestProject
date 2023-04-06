@@ -16,9 +16,11 @@
     <br/>
     <input type="submit" value="Login">
     <br/>
+    <a th:href="@{/auth/registration}"> Registration</a>
+    <br/>
 
     <div th:if="${param.error}" style="color: red"> Incorrect name or password</div>
-
 </form>
+
 </body>
 </html>

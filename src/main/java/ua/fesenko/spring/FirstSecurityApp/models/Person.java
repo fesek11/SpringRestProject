@@ -3,6 +3,7 @@ package ua.fesenko.spring.FirstSecurityApp.models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,18 +25,7 @@ public class Person {
     @Column(name = "password")
     private String password;
 
-    public Person(String username, int year_of_birth) {
-        this.username = username;
-        this.year_of_birth = year_of_birth;
-    }
+    @Column(name = "role")
+    private String role;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", year_of_birth=" + year_of_birth +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }
